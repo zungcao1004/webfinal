@@ -4,6 +4,10 @@
 
     <div class="row">
         <div class="col-md-12">
+            @if (session('message'))
+                <div class="alert alert-success">{{ session('message') }}</div>
+            @endif
+
             <div class="card">
                 <div class="card-header">
                     <h3>
@@ -15,7 +19,7 @@
                     </h3>
                 </div>
                 <div class="card-body">
-                    <form action="{{ url('admin/category').$category->id }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ url('admin/category/').$category->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
