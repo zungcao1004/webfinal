@@ -20,7 +20,7 @@
     + Color Functions Mixins
     + Badge Mixins
     + Blockquote Mixins
-    
+
   * Core Styles
     + Reset Styles
     + Fonts
@@ -43,7 +43,7 @@
     + Lists
     + Tables
   * Plugin overrides
-    + Data-tables  
+    + Data-tables
   * Landing screens
     + Auth
   * Layout
@@ -22581,7 +22581,7 @@ dl li {
   padding: 0;
 }
 
-.sidebar .nav.sub-menu .nav-item::before {
+/* .sidebar .nav.sub-menu .nav-item::before {
   content: '';
   position: absolute;
   width: 5px;
@@ -22589,7 +22589,7 @@ dl li {
   border-radius: 50%;
   background: #000;
   margin-top: 15px;
-}
+} */
 
 .sidebar .nav.sub-menu .nav-item .nav-link {
   color: #656565;
