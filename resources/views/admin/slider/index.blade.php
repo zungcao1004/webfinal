@@ -40,8 +40,8 @@
                                     </td>
                                     <td>{{ $slider->status == '0' ? 'Visible' : 'Hidden' }}</td>
                                     <td>
-                                        <a href="" class="btn btn-success btn-sm">Edit</a>
-                                        <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                        <a href="{{ url('admin/sliders/'.$slider->id .'/edit') }}" class="btn btn-success btn-sm">Edit</a>
+                                        <a href="{{ url('admin/sliders/'.$slider->id .'/delete') }}" onclick="return confirm('Are you sure want to delete this?')" class="btn btn-danger btn-sm">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
