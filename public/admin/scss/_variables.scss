@@ -68,7 +68,8 @@ $theme-colors: (
   dark:            #282f3a
 );
 
-$primary:         #4d83ff;
+$sidebar_color_hover: #ee4d2d;
+$primary:         #ee4d2d;
 $secondary:       #686868;
 $success:         #71c016;
 $info:            #7859df;
@@ -254,9 +255,9 @@ $sidebar-light-bg: #ffffff;
 $sidebar-light-menu-color: #000;
 $sidebar-light-submenu-color: #656565;
 $sidebar-light-menu-active-bg: initial;
-$sidebar-light-menu-active-color: $primary;
+$sidebar-light-menu-active-color: $sidebar_color_hover;
 $sidebar-light-menu-hover-bg: transparent;
-$sidebar-light-menu-hover-color: $primary;
+$sidebar-light-menu-hover-color: $sidebar_color_hover;
 $sidebar-light-submenu-hover-color: $black;
 $sidebar-light-submenu-active-color: $black;
 $sidebar-light-menu-icon-color: inherit;
