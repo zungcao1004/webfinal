@@ -22,6 +22,8 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'index']);
 Route::get('/collections', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'categories']);
+Route::get('/collections/{category_slug}', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'products']);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
