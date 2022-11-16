@@ -26,6 +26,7 @@ return array(
     'App\\Http\\Livewire\\Admin\\Brand\\Index' => $baseDir . '/app/Http/Livewire/Admin/Brand/Index.php',
     'App\\Http\\Livewire\\Admin\\Category\\Index' => $baseDir . '/app/Http/Livewire/Admin/Category/Index.php',
     'App\\Http\\Livewire\\Frontend\\Product\\Index' => $baseDir . '/app/Http/Livewire/Frontend/Product/Index.php',
+    'App\\Http\\Livewire\\Frontend\\Product\\View' => $baseDir . '/app/Http/Livewire/Frontend/Product/View.php',
     'App\\Http\\Middleware\\AdminMiddleware' => $baseDir . '/app/Http/Middleware/AdminMiddleware.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',

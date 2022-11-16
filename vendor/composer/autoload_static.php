@@ -541,6 +541,7 @@ class ComposerStaticInit5f95d7a5a37bac2d1eab0376a33ee076
         'App\\Http\\Livewire\\Admin\\Brand\\Index' => __DIR__ . '/../..' . '/app/Http/Livewire/Admin/Brand/Index.php',
         'App\\Http\\Livewire\\Admin\\Category\\Index' => __DIR__ . '/../..' . '/app/Http/Livewire/Admin/Category/Index.php',
         'App\\Http\\Livewire\\Frontend\\Product\\Index' => __DIR__ . '/../..' . '/app/Http/Livewire/Frontend/Product/Index.php',
+        'App\\Http\\Livewire\\Frontend\\Product\\View' => __DIR__ . '/../..' . '/app/Http/Livewire/Frontend/Product/View.php',
         'App\\Http\\Middleware\\AdminMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminMiddleware.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
