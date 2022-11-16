@@ -47,14 +47,76 @@ class View extends Component
             if ($this->product->where('id', $productId)->where('status', '0')->exists()) {
                 if ($this->product->productColors()->count() >= 1) {
                     if ($this->productColorSelectedQuantity != null) {
-                        $productColor = $this->product->productColors()->where('id', $this->productColorId)->first();
-                        if ($productColor->quantity > 0) {
+                        if (Cart::where('user_id', auth()->user()->id)
+                            ->where('product_id', $productId)
+                            ->where('product_color_id', $this->productColorId)
+                            ->exists()
+                        ) {
+                            session()->flash('message', 'Product already added');
+                            $this->dispatchBrowserEvent('message', [
+                                'text' => 'Product already added',
+                                'type' => 'warning',
+                                'status' => 200,
+                            ]);
+                        } else {
+                            $productColor = $this->product->productColors()->where('id', $this->productColorId)->first();
+                            if ($productColor->quantity > 0) {
+                                if ($this->product->quantity >= $this->quantityCount) {
+                                    // insert product to cart with color selected
+                                    Cart::create([
+                                        'user_id' => auth()->user()->id,
+                                        'product_id' => $productId,
+                                        'product_color_id' => $this->productColorId,
+                                        'quantity' => $this->quantityCount,
+                                    ]);
+                                    session()->flash('message', 'Product added to cart');
+                                    $this->dispatchBrowserEvent('message', [
+                                        'text' => 'Product added to cart',
+                                        'type' => 'warning',
+                                        'status' => 200,
+                                    ]);
+                                } else {
+                                    session()->flash('message', 'Available ' . $this->product->quantity . ' left');
+                                    $this->dispatchBrowserEvent('message', [
+                                        'text' => 'Available ' . $this->product->quantity . ' left',
+                                        'type' => 'warning',
+                                        'status' => 404,
+                                    ]);
+                                }
+                            } else {
+                                session()->flash('message', 'Out of stock');
+                                $this->dispatchBrowserEvent('message', [
+                                    'text' => 'Out of stock',
+                                    'type' => 'warning',
+                                    'status' => 404,
+                                ]);
+                            }
+                        }
+                    } else {
+                        session()->flash('message', 'Select product color');
+                        $this->dispatchBrowserEvent('message', [
+                            'text' => 'Select product color',
+                            'type' => 'info',
+                            'status' => 404,
+                        ]);
+                    }
+                } else {
+                    if (Cart::where('user_id', auth()->user()->id)->where('product_id', $productId)->exists()) {
+                        session()->flash('message', 'Product already added');
+                        $this->dispatchBrowserEvent('message', [
+                            'text' => 'Product already added',
+                            'type' => 'warning',
+                            'status' => 200,
+                        ]);
+                    } else {
+
+
+                        if ($this->product->quantity > 0) {
                             if ($this->product->quantity >= $this->quantityCount) {
                                 // insert product to cart
                                 Cart::create([
                                     'user_id' => auth()->user()->id,
                                     'product_id' => $productId,
-                                    'product_color_id' => $this->productColorId,
                                     'quantity' => $this->quantityCount,
                                 ]);
                                 session()->flash('message', 'Product added to cart');
@@ -79,34 +141,6 @@ class View extends Component
                                 'status' => 404,
                             ]);
                         }
-                    } else {
-                        session()->flash('message', 'Select product color');
-                        $this->dispatchBrowserEvent('message', [
-                            'text' => 'Select product color',
-                            'type' => 'info',
-                            'status' => 404,
-                        ]);
-                    }
-                } else {
-
-                    if ($this->product->quantity > 0) {
-                        if ($this->product->quantity >= $this->quantityCount) {
-                            // insert product to cart
-                        } else {
-                            session()->flash('message', 'Available ' . $this->product->quantity . ' left');
-                            $this->dispatchBrowserEvent('message', [
-                                'text' => 'Available ' . $this->product->quantity . ' left',
-                                'type' => 'warning',
-                                'status' => 404,
-                            ]);
-                        }
-                    } else {
-                        session()->flash('message', 'Out of stock');
-                        $this->dispatchBrowserEvent('message', [
-                            'text' => 'Out of stock',
-                            'type' => 'warning',
-                            'status' => 404,
-                        ]);
                     }
                 }
             } else {
