@@ -3,11 +3,15 @@
 namespace App\Http\Livewire\Admin\Brand;
 
 use App\Models\Brand;
+<<<<<<< HEAD
 use Livewire\Component;
 use App\Models\Category;
 
 use Illuminate\Support\Str;
 use Livewire\WithPagination;
+=======
+use App\Models\Category;
+>>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
 
 class Index extends Component
 {
@@ -22,6 +26,7 @@ class Index extends Component
         return [
             'name' => 'required|string',
             'slug' => 'required|string',
+            'category_id' => 'required|integer',
             'status' => 'nullable',
             'category_id' => 'required|integer',
         ];

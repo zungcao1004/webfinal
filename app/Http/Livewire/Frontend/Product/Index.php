@@ -2,12 +2,16 @@
 
 namespace App\Http\Livewire\Frontend\Product;
 
+<<<<<<< HEAD
 use App\Models\Product;
+=======
+>>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
 use Livewire\Component;
 
 class Index extends Component
 {
 
+<<<<<<< HEAD
     public $products, $category, $brandInputs = [];
 
     protected $queryString = [
@@ -34,3 +38,19 @@ class Index extends Component
         ]);
     }
 }
+=======
+    public function mount($products, $category)
+    {
+        $this->products = $products;
+        $this->category = $category;
+    }
+
+    public function render()
+    {
+        return view('livewire.frontend.product.index', [
+            'products' => $this->products,
+            'category' => $this->category
+        ]);
+    }
+}
+>>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf

@@ -73,6 +73,7 @@ class CategoryController extends Controller
         $category->description = $validatedData['description'];
 
         if ($request->hasFile('image')) {
+            $uploadPath = 'uploads/category/';
 
             $uploadPath = 'uploads/category/';
 
