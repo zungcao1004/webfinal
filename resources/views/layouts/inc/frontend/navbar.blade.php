@@ -24,19 +24,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
-<<<<<<< HEAD
                             <a class="nav-link" href="{{ url('wishlist') }}">
                                 <i class="fa fa-heart"></i> Wishlist (
                                 <livewire:frontend.wishlist-count />)
                             </a>
                         </li>
-=======
-                            <a class="nav-link" href="#">
-                                <i class="fa fa-heart"></i> Wishlist (0)
-                            </a>
-                        </li>
-
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -51,7 +43,6 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-<<<<<<< HEAD
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fa fa-user"></i> {{ Auth::user()->name }}
@@ -78,27 +69,6 @@
                                             @csrf
                                         </form>
                                     </li>
-=======
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa fa-user"></i> {{ Auth::user()->name }}
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa fa-list"></i> My Orders</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa fa-heart"></i> My Wishlist</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
-                                        <i class="fa fa-sign-out"></i>{{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </li>
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
                                 </ul>
                             </li>
                         @endguest
@@ -112,13 +82,9 @@
             <a class="navbar-brand d-block d-sm-block d-md-none d-lg-none" href="#">
                 Funda Ecom
             </a>
-<<<<<<< HEAD
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-=======
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">

@@ -12,7 +12,6 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label>Select Category</label>
-<<<<<<< HEAD
                         <select class="form-control" required wire:model.defer="category_id">
                             <option value="">--Select Category--</option>
                             @foreach ($categories as $categoryItem)
@@ -23,19 +22,6 @@
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
-=======
-                        <select wire:model.defer="category_id" class="form-control" required>
-                            <option value="">--Select Category--</option>
-                            @foreach ($categories as $cateItem)
-                                <option value="{{ $cateItem->id }}">{{ $cateItem->name }}</option>
-                            @endforeach
-                        </select>
-                        @error('category_id')
-                        <small class="text-danger">{{ $message }}</small>
-                        @enderror
-                    </div>
-
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
                     <div class="mb-3">
                         <label>Brand Name</label>
                         <input type="text" class="form-control" wire:model.defer="name">
@@ -85,7 +71,6 @@
                 </div> Loading...
             </div>
 
-<<<<<<< HEAD
             <div wire:loading.remove>
                 <form wire:submit.prevent="updateBrand">
                     <div class="modal-body">
@@ -101,24 +86,6 @@
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-=======
-           <div wire:loading.remove>
-                <form wire:submit.prevent="storeBrand">
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label>Select Category</label>
-                            <select wire:model.defer="category_id" class="form-control" required>
-                                <option value="">--Select Category--</option>
-                                @foreach ($categories as $cateItem)
-                                    <option value="{{ $cateItem->id }}">{{ $cateItem->name }}</option>
-                                @endforeach
-                            </select>
-                            @error('category_id')
-                            <small class="text-danger">{{ $message }}</small>
-                            @enderror
-                        </div>
-
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
                         <div class="mb-3">
                             <label>Brand Name</label>
                             <input type="text" class="form-control" wire:model.defer="name">

@@ -25,7 +25,6 @@ Route::get('/', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'index
 Route::get('/collections', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'categories']);
 Route::get('/collections/{category_slug}', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'products']);
 
-<<<<<<< HEAD
 Route::get('/collections/{category_slug}/{product_slug}', [App\Http\Controllers\FrontEnd\FrontEndController::class, 'productView']);
 
 
@@ -33,8 +32,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('wishlist', [App\Http\Controllers\Frontend\WishlistController::class, 'index']);
 });
 
-=======
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

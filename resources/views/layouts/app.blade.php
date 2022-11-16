@@ -10,22 +10,18 @@
 
     <title>@yield('title')</title>
 
-<<<<<<< HEAD
     <meta name="description" content="@yield('meta_description')">
     <meta name="keywords" content="@yield('meta_keyword')">
     <meta name="author" content>
-=======
-    <meta name="description" content="@yiedl('meta_description')">
-    <meta name="keywords" content="@yiedl('meta_keyword')">
-    <meta name="author" content="IT-4M">
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
@@ -38,7 +34,6 @@
 <body>
     <div id="app">
         @include('layouts.inc.frontend.navbar')
-<<<<<<< HEAD
         {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -92,8 +87,6 @@
                 </div>
             </div>
         </nav> --}}
-=======
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
 
         <main class="py-4">
             @yield('content')

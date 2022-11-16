@@ -35,16 +35,9 @@
                                         @if ($brand->category)
                                             {{ $brand->category->name }}
                                         @else
-<<<<<<< HEAD
                                             No Category
                                         @endif
                                     </td>
-=======
-                                            <h4>No Category</h4>
-                                        @endif
-                                    </td>
-
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
                                     <td>{{ $brand->slug }}</td>
                                     <td>{{ $brand->status == '1' ? 'hidden' : 'visible' }}</td>
                                     <td>

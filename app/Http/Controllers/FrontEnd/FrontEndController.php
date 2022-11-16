@@ -25,7 +25,6 @@ class FrontEndController extends Controller
     public function products($category_slug)
     {
         $category = Category::where('slug', $category_slug)->first();
-<<<<<<< HEAD
         if ($category) {
             return view('frontend.collections.products.index', compact('category'));
         } else {
@@ -41,19 +40,8 @@ class FrontEndController extends Controller
             if ($product) {
                 return view('frontend.collections.products.view', compact('product', 'category'));
             }
-=======
-
-        if ($category) {
-            $products = $category->products()->get();
-
-            return view('frontend.collections.products.index', compact('products', 'category'));
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
         } else {
             return redirect()->back();
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> be5a8301880f2deef97ce645c6da40304d7f49bf
