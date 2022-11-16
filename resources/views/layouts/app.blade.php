@@ -9,6 +9,10 @@
 
     <title>@yield('title')</title>
 
+    <meta name="description" content="@yiedl('meta_description')">
+    <meta name="keywords" content="@yiedl('meta_keyword')">
+    <meta name="author" content="IT-4M">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
